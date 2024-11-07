@@ -1,0 +1,210 @@
+@font-face {
+    font-family: font1;
+    src: url(font/Copyduck.ttf);
+  }
+
+*{
+    font-family: font1;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background-image: url(afbeeldingen/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+
+h1 {
+    font-size: 50px;
+    color: #653f19;
+    margin: 20px 0 10px 0;
+}
+ 
+h2 {
+    margin-bottom: 0;
+    color: #653f19;
+}
+
+#cookie {
+    width: 225px;
+    cursor: pointer;
+}
+
+#cookie:hover, button:hover {
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+}
+
+#cookie:active, button:active {
+    transform: scale(0.9);
+    transition: transform 0.1s ease;
+}
+
+
+button {
+    color: #653f19;
+    background-color: #f1a843;
+    width: 250px;
+    height: 75px;
+    padding: 10px 50px;
+    border-radius: 25px;
+    border: solid 5px #a36424;
+    font-size: 15px;
+    cursor: pointer;
+    margin: 20px 10px 0 10px;
+}
+
+button:disabled {
+    opacity: 20%;
+    cursor: not-allowed;
+}
+
+
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Standaard is het info-vakje verborgen */
+.info {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: -180px; /* Links van de knop */
+    transform: translateY(-50%);
+    width: max-content;
+    padding: 5px;
+    background-color: #f9f9f9;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    font-size: 14px;
+    z-index: 10;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Specifieke styling voor info-vakjes aan de rechterkant */
+.info-rechts {
+    left: 280px; /* Rechts van de knop */
+}
+
+/* Zorg ervoor dat het info-vakje verschijnt wanneer je over de knop hovert */
+.button-wrapper:hover .info {
+    display: block;
+}
+
+  #icon {
+    width: 20px;
+  }
+
+  #overzicht {
+    background-color: #00000020;
+    font-size: 20px;
+    color: #653f19;
+  }
+
+  #theme-switcher {
+    position: absolute;
+    right: 20px;
+    top: 220px;
+    transform: translateY(-50%);
+    background-color: #e0a655;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 2px #a36424;
+    color: #653f19;
+    font-size: 16px;
+}
+
+#theme-switcher select {
+    padding: 5px;
+    border-radius: 5px;
+    border: solid 1px #000000;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 870px) {
+    #theme-switcher {
+        top: 240px;
+        right: 10px;
+        width: 120px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    #theme-switcher select {
+        width: 100%;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #theme-switcher {
+        width: 100px;
+        padding: 5px;
+        right: 5px;
+        font-size: 12px;
+    }
+
+    #theme-switcher select {
+        font-size: 12px;
+    }
+}
+
+
+
+.small-cookie {
+    position: absolute;
+    width: 50px; /* Pas aan voor de grootte van het kleine koekje */
+    pointer-events: none; /* Zorgt ervoor dat het kleine koekje niet klikbaar is */
+    transition: transform 2s ease-out, opacity 2s ease-out;
+}
+
+.fade-out {
+    transform: translateY(-200px); /* Verplaats het koekje omhoog */
+    opacity: 0; /* Laat het koekje verdwijnen */
+}
+
+
+#reset {
+    position: absolute;
+    height: fit-content;
+    width: 280px;
+    right: 10px;
+    top: 150px;
+    transform: translateY(-50%);
+    background-color: #e0a655;
+    border-radius: 10px;
+    border: solid 2px #a36424;
+    color: #653f19;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 870px) {
+    #reset {
+        top: 160px;
+        right: 10px;
+        width: 120px;
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    #reset {
+        top: 165px;
+        width: 100px;
+        padding: 5px;
+        font-size: 12px;
+    }
+}

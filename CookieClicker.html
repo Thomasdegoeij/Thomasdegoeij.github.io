@@ -1,0 +1,71 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CookieClicker</title>
+
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="overzicht">
+            Auto Clicker:       <span id="upgrades1">0</span>           <span style="color: black;">|</span>
+            Clicker x2:         <span id="upgrades2">0</span>           <span style="color: black;">|</span>
+            Koekjes Oven:       <span id="upgrades3">0</span>           <span style="color: black;">|</span>
+            Koekjes Bakkerij:   <span id="upgrades4">0</span>           <span style="color: black;">|</span>
+            Koekjes Fabriek:    <span id="upgrades5">0</span>           <span style="color: black;">|</span>
+            Koekjes Mijn:       <span id="upgrades6">0</span>   <br>
+            <span id="cps">Cookies per seconde: 0</span>
+        </div>
+        
+        <h1>Cookie Clicker</h1>
+        <img id="cookie" src="afbeeldingen/cookie.png" alt="cookie" draggable="false">
+        <h2>Koekjes: <span id="score">0</span></h2>
+
+        <div class="flex-container">
+            <div class="button-wrapper">
+                <button id="koopUpgrade1">Auto Clicker <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">15</button>
+                <div class="info">1 cookie per seconde</div>
+            </div>
+            <div class="button-wrapper">
+                <button id="koopUpgrade2">Clicker x2 <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">500</button>
+                <div class="info info-rechts">Verdubbelt je klik</div>
+            </div>
+            <div class="button-wrapper">
+                <button id="koopUpgrade3">Koekjes Oven <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">100</button>
+                <div class="info">6 cookies per seconde</div>
+            </div>
+            <div class="button-wrapper">
+                <button id="koopUpgrade4">Koekjes bakkerij <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">1.100</button>
+                <div class="info info-rechts">32 cookies per seconde</div>
+            </div>
+            <div class="button-wrapper">
+                <button id="koopUpgrade5">Koekjes Fabriek <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">12.000</button>
+                <div class="info">94 cookies per seconde</div>
+            </div>
+            <div class="button-wrapper">
+                <button id="koopUpgrade6">Koekjes Mijn <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">130.000</button>
+                <div class="info info-rechts">956 cookies per seconde</div>
+            </div>
+        </div>
+
+        <div id="theme-switcher">
+            <label for="theme">Selecteer Thema:</label>
+            <select id="theme" onchange="changeTheme()">
+                <option value="default">Standaard</option>
+                <option value="blauw">Blauw</option>
+                <option value="rood">Rood</option>
+            </select>
+        </div>
+
+        <button id="reset" onclick="resetProgress()">Reset Voortgang</button>
+
+
+        
+        <script src="script.js"></script>
+        <script src="thema.js"></script>
+        <script src="cookie.js"></script>
+        
+
+    </body>
+    </html>
