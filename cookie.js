@@ -1,6 +1,14 @@
 document.getElementById("cookie").addEventListener("click", (event) => {
     const smallCookie = document.createElement("img");
-    smallCookie.src = "afbeeldingen/cookie.png"; // Path naar je kleine cookie-afbeelding
+    
+    // Controleer of het voetbal-thema actief is
+    const theme = document.getElementById('theme').value;
+    if (theme === 'voetbal') {
+        smallCookie.src = "afbeeldingen/voetbal.png";  // Gebruik de voetbal afbeelding voor kleine koekjes
+    } else {
+        smallCookie.src = "afbeeldingen/cookie.png";  // Standaard koekje
+    }
+    
     smallCookie.classList.add("small-cookie");
 
     // Bereken willekeurige offset en centreren rond de cursor
