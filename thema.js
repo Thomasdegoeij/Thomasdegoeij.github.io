@@ -10,7 +10,7 @@ function changeTheme() {
     switch (theme) {
         case 'blauw':
             cookieImage.src = 'afbeeldingen/cookie.png';
-            document.body.style.backgroundImage = "url('afbeeldingen/background_blue.png')";
+            document.body.style.backgroundImage = "url('afbeeldingen/backgroundd_blue.png')";
             buttons.forEach(button => {
                 button.style.backgroundColor = '#6abcbc'; 
                 button.style.borderColor = '#487878'; 
@@ -32,7 +32,7 @@ function changeTheme() {
 
         case 'rood':
             cookieImage.src = 'afbeeldingen/cookie.png';
-            document.body.style.backgroundImage = "url('afbeeldingen/background_red.png')";
+            document.body.style.backgroundImage = "url('afbeeldingen/backgroundd_red.png')";
             buttons.forEach(button => {
                 button.style.backgroundColor = '#b46865'; 
                 button.style.borderColor = '#623e3c'; 
@@ -83,7 +83,7 @@ function changeTheme() {
             break;
 
         default:
-            document.body.style.backgroundImage = "url('afbeeldingen/background.png')";
+            document.body.style.backgroundImage = "url('afbeeldingen/backgroundd.png')";
             cookieImage.src = 'afbeeldingen/cookie.png'; // Standaard grote cookie-afbeelding
 
             buttons.forEach(button => {
