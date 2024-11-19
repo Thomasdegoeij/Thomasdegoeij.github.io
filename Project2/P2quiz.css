@@ -1,0 +1,166 @@
+*{
+    font-family: 'Barlow', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(achtergrond.png); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+  .quiz-container{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: #006445;
+    width: 600px;
+    overflow: hidden;
+  }
+  .quiz-header{
+    padding: 4em;
+  }
+  h2{
+    padding: 1em;
+    text-align: center;
+    margin: 0;
+  }
+  ul{
+    list-style-type: none;
+    padding: 0;
+  }
+  ul li{
+    font-size: 1.2em;
+    margin: 1em 0;
+  }
+  ul li label{
+    cursor: pointer;
+  }
+  button{
+    background-color: #006445;
+    color: #dbff4a;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-family: inherit;
+    padding: 1.3rem;
+  }
+  button:hover{
+    background-color: #005445;
+  }
+  button:focus{
+    outline: none;
+    background-color: #dbff4a;
+    color: #006445;
+  }
+  .logo{
+    padding: 25px;
+    position: absolute;
+    left: 1px;
+    top: 5px;
+}
+    a{
+    text-decoration: none;
+    color: #dbff4a;
+    }
+    
+    .navbar{
+    width: 49%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50px;
+    right: -100px;
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    }
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 10px;
+      position: relative;
+      top: 0px;
+      right: 100px;
+    }
+    .navbar ul li a{
+      text-decoration: none;
+      color: #dbff4a;
+      text-transform: uppercase;
+      font-weight: bold;
+      position: relative;
+      font-size: 1.0em;
+    }
+    .navbar ul li::after{
+      content: '';
+      height: 4px;
+      width: 0;
+      background-color: #dbff4a;
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      transition: 0.5s;
+    }
+    .navbar ul li:hover::after{
+      width: 100%;
+    
+    }
+    .menu-icon{
+      position: absolute;
+      top: 61px;
+      right: 120px;
+      cursor: pointer;
+      width: 60px;
+    }
+   
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 250px;
+    top: 0;
+    right: 0;
+    background-color: #006445;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius: 18px;
+    }
+    
+    .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #dbff4a;
+    display: block;
+    transition: 0.3s;
+    }
+    
+    .sidepanel a:hover {
+    color: #f1f1f1;
+    }
+    
+    .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    color: #dbff4a;
+    }
+    
+    .openbtn {
+    cursor: pointer;
+    position: absolute;
+    top: 65px;
+    right: 125px;
+    background-color: #006445;
+    opacity: 0%;
+    width: 3vw;
+    height: 5vh;
+    background-color: none;
+    }
+    

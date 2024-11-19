@@ -1,0 +1,334 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;    
+   }
+   body{
+    height: 130vh;
+    background-color: #006445;
+    background-repeat: no-repeat;
+    
+   }
+  
+
+   .image{
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-image: url(Pand-Prins-Alexanderlaan-55.jpeg);
+    color: #006445;
+    box-shadow: 0 1.5px 0 0 #dbff4a;
+   }
+   .image-overlay{
+    width: 100%;
+    height: 100vh;
+    background-color: #006445;
+    opacity: 80%;
+   }
+
+   h1{
+    text-align: center;
+    font-size: 5em;
+    position: absolute;
+    top: 380px;
+    left: 150px;
+    color: #dbff4a;
+   }
+   h2{
+    color: #dbff4a;
+    position: absolute;
+    top: 625px;
+    left: 150px;
+    font-size: 2.5em;
+   }
+   .text6{
+    text-align: left;
+    font-size: 1em;
+    position: absolute;
+    top: 485px;
+    left: 150px;
+    color: #dbff4a;
+    font-weight: bold;
+  }
+  h3{
+  color: #dbff4a;
+  font-size: 1.5em;
+  }
+  h4{
+    color: #dbff4a;
+  font-size: 1.5em;
+  }
+  h5{
+  color: #dbff4a;
+  font-size: 1.5em;
+ 
+  }
+  h6{
+    color: #dbff4a;
+  font-size: 1.5em;
+  }
+  .text1{
+   color: #dbff4a;
+   font-size: 0.7em;
+   
+
+  }
+  .text2{
+    color: #dbff4a;
+   font-size: 0.7em;
+  }
+  .text3{
+   color: #dbff4a;
+   font-size: 0.7em;
+  }
+  .text4{
+    color: #dbff4a;
+   font-size: 0.7em;
+  }
+   a{
+text-decoration: none;
+color: #dbff4a;
+
+}
+
+.navbar{
+width: 49%;
+margin: auto;
+display: flex;
+justify-content: space-between;
+position: absolute;
+top: 70px;
+right: -100px;
+font-weight: bold;
+font-size: 1.5em;
+font-family: sans-serif;
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 10px;
+  position: relative;
+  top: 0px;
+  right: 100px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #dbff4a;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.0em;
+}
+.navbar ul li::after{
+  content: '';
+  height: 4px;
+  width: 0;
+  background-color: #dbff4a;
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.5s;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+
+}
+.menu-icon{
+  position: absolute;
+  top: 61px;
+  right: 100px;
+  cursor: pointer;
+  width: 60px;
+
+}
+
+.logo{
+position: absolute;
+top: 30px;
+left: 25px;
+}
+.button {
+background-color: #dbff4a;
+color: #006445;
+text-align: center;
+display: inline-block;
+font-size: 1.7em;
+cursor: pointer;
+border-radius: 25px;
+position: absolute;
+top: 550px;
+left: 150px;
+width: 12vw;
+font-family: sans-serif;
+font-weight: 550;
+}
+.border{
+background-color: #006445;
+
+}
+.col{
+flex-basis: 50%;
+}
+.card{
+width: 228px;
+height: 260px;
+display: inline-block;
+border-radius: 10px;
+padding: 10px;
+box-sizing: border-box;
+cursor: pointer;
+margin: 10px 15px;
+background-position: center;
+background-size: cover;
+border: solid 4px #dbff4a;
+transition: transform 0.5s;
+background-color: #006445;
+
+
+
+}
+.card1{
+background-image:url(chatgr.png);
+position: absolute;
+top: 170px;
+right: 450px;
+color: #dbff4a;
+
+
+}
+.card2{
+background-image:url(countdowngr.png);
+position: absolute;
+top: 170px;
+right: 195px;
+color: #dbff4a;
+}
+.card3{
+background-image:url(ijschrgr.png);
+position: absolute;
+top: 450px;
+right: 450px;
+color: #dbff4a;
+}
+.card4{
+background-image:url(doelachtergr.jpg.png);
+position: absolute;
+top: 450px;
+right: 195px;
+color: #dbff4a;
+}
+.card:hover{
+transform: translateY(-10px);
+}
+.sitemap{
+position: absolute;
+top: 770px;
+left: 10px;
+font-size: 1.5em;
+text-decoration: underline;
+color: #dbff4a;
+
+
+} 
+script{
+color: #dbff4a;
+font-size: 2em;
+position: absolute;
+top: 10px;
+left: 500px;
+}
+
+
+.sidepanel  {
+width: 0;
+position: fixed;
+z-index: 1;
+height: 250px;
+top: 0;
+right: 0;
+background-color: #006445;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+border-radius: 18px;
+}
+
+.sidepanel a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #dbff4a;
+display: block;
+transition: 0.3s;
+}
+
+.sidepanel a:hover {
+color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+color: #dbff4a;
+}
+
+.openbtn {
+cursor: pointer;
+position: absolute;
+top: -560px;
+right: -1010px;
+background-color: #006445;
+opacity: 0%;
+width: 3vw;
+height: 6vh;
+}
+.popup{
+  background-color: #006445;
+  width: 450px;
+  padding: 30px 40px;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  left: 250px;
+  top: -425px;
+  border-radius: 8px;
+  font-family: sans-serif;
+  font-size: 1em;
+  display: none;
+  border: solid 4px #dbff4a;
+}
+.popup button{
+  display: block;
+  margin: 0 0 20px auto;
+  background-color: transparent;
+  font-size: 30px;
+  color: #dbff4a;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+p{
+  color: #dbff4a;
+  font-size: 17px;
+  text-align: justify;
+  margin: 20px 0;
+}
+.popuptitle{
+  color: #dbff4a;
+  font-size: 30px;
+}
+.popup a{
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: auto;
+  text-align: center;
+  background-color: #dbff4a;
+  color: #006445;
+  text-decoration: none;
+  padding: 5px 0;
+  font-size: 17px;
+}

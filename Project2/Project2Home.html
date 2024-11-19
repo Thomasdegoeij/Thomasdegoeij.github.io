@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P2 Homepagina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Project2Home.css">
+       
+</head>
+<body>
+
+
+
+
+    <div class="image">
+        <div class="image-overlay">
+        </div>
+    </div>
+    <h1>Project</h1>
+    <div class="text6">Welkom bij de website van Ziad, Luka & Thomas. Wij hebben deze website gemaakt<br>
+       voor een opdracht van school.</div>
+
+    
+       <a href="https://www.techniekcollegerotterdam.nl/over-techniek-college-rotterdam" class="button">Informatie</a>
+
+
+       <div class="navbar">
+        <ul>
+          <li><a href="project2homepagina.html">HOME</a></li>
+          <li><a href="chatbot.html">CHATBOT</a></li>
+          <li><a href="countdown1.html">OPENDAG</a></li>
+          <li><a href="P2quiz.html">QUIZ</a></li>
+          <li><a href="talenttree.html">TALENTTREE</a></li>
+          </ul>
+    </div>
+
+
+    <div class="col">
+        <div class="card card1">
+          <a href="chatbot.html">
+          <h3>Chatbot</h3>
+    <div class="text1">
+    Praat met onze zelf gemaakte chatbot!</a></div>
+        </div>
+        <div class="card card2">
+          <a href="countdown1.html">
+          <h4>Opendag</h4>
+        <div class="text2">
+        Kijk wanneer de opendag van het <br>techniek college is!</a></div>
+        </div>
+        <div class="card card3">
+          <a href="inschrijven1.html">
+          <h5>Inschrijven</h5>
+          <div class="text3">
+            Schrijf je in voor onze opleidingen!</a></div>
+        </div>
+           <div class="card card4">
+            <a href="P2quiz.html">
+            <h6>Quiz</h6>
+          <div class="text4">
+           Test jezelf met onze zelf gemaakte quiz!</a></div>
+        </div>
+    </div>
+    
+
+
+
+
+    
+
+    <div class="logo">
+        <a href="Project2Home.html"><img src="TCR (1).png" width="70px"></a>
+    </div>
+
+    <div class="menu-icon">
+        <img src="menu.png" width="53px">
+      </div>
+  
+
+
+    <div class="sitemap">
+      <a href="Project2Home.html">Home<br></a>
+      <a href="chatbot.html">Chatbot<br></a>
+      <a href="countdown1.html">Opendag<br></a>
+      <a href="inschrijven1.html">Inschrijven<br></a>
+      <a href="P2quiz.html">Quiz<br></a>
+      <a href="P2contact.html">Contact<br></a></div>
+    </div>
+
+    
+
+
+    <p id="demo"></p>
+
+    
+    <script>  
+        var welcome;  
+        var date = new Date();  
+        var hour = date.getHours();  
+        var minute = date.getMinutes();  
+        var second = date.getSeconds();  
+        if (minute < 10) {
+          minute = "0" + minute;  
+        }  
+        if (second < 10) {  
+          second = "0" + second;   //als het minder dan 10 is wordt er een 0 bij toegevoegd//
+        }  
+        if (hour < 12) {  
+          welcome = "Goede Morgen";  //als het minder dan 12 is wordt er een 0 bij toegevoegd//
+        } else if (hour < 18) {  
+          welcome = "Goede Middag";  
+        } else {  
+          welcome = "Goede Avond";  
+        }  
+        document.write("<h2>" + welcome);  
+        </script>
+        
+        
+        <div id="mySidepanel" class="sidepanel">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="P2inloggen.html">Inloggen</a>
+            <a href="https://www.techniekcollegerotterdam.nl/over-techniek-college-rotterdam">Informatie</a>
+            <a href="inschrijven1.html">Inschrijven</a>
+            <a href="P2contact.html">Contact</a>
+          </div>
+          
+          <button class="openbtn" onclick="openNav()"><img src="menu.png" width="50px"></button>  
+          
+          
+          <script>
+          function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";    // De breedte van de sidepanel als die open is //
+          }
+          
+          function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";      // De breedte van de sidepanel als die dicht is //
+          }
+          </script>
+
+
+
+          <div class="popup">
+            <button id="close">&times;</button>
+            <div class="popuptitle">
+              Welkom op onze website.
+            </div>
+            <p>Welkom op onze website, kijk lekker <br>gerust door onze website.
+            Wilt uw <br>de volgende opendag zien?
+          <br>Klik dan op de knop hier onder.</p>
+            <a href="countdown1.html">Open dag</a>
+          </div>
+
+          <script>
+            window.addEventListener("load", function(){       // Het wacht eerst todat de pagina is geladen en er wordt een pauze ingesteld van een seconde //
+            setTimeout(
+                     function open(event){
+                      document.querySelector(".popup").style.    // dan wordt de popup zichtbaar door de functie 'open' //
+                      display = "block";
+
+                     },
+                      1000   // het wacht 1000 millieseconden voordat het functie uitvoert //
+                 )
+            });
+
+
+            document.querySelector("#close").addEventListener  // het sluit de popup met de id 'close'
+            ("click", function(){
+                  document.querySelector(".popup").style.display =
+                  "none";
+            });
+          </script>
+             
+
+</body>
+</html>

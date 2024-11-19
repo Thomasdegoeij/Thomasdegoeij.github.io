@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="countdown1.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <title>Countdown</title>
+</head>
+<body>
+
+    
+
+
+    <div class="logo">
+        <a href="Project2Home.html"><img src="TCR (1).png" width="70px"></a>
+       </div>
+
+       <div class="navbar">
+        <ul>
+          <li><a href="Project2Home.html">HOME</a></li>
+          <li><a href="chatbot.html">CHATBOT</a></li>
+          <li><a href="countdown1.html">OPENDAG</a></li>
+          <li><a href="P2quiz.html">QUIZ</a></li>
+          <li><a href="talenttree.html">TALENTTREE</a></li>
+          </ul>
+    </div>
+
+    
+    <div class="menu-icon">
+        <img src="menu.png" width="53px">
+      </div>
+  
+
+    
+
+    <div class="tekst">
+
+        <p>
+
+            Kloink, kloink! Hoor je het geluid van metaal?
+             <br>Kun je het rubber al ruiken en zie je de
+              <br>gifgroene vloeistoffen borrelen? Je beleeft
+               <br>onze technische mbo-opleidingen het beste
+                <br>op een van onze locaties. Bezoek de Open
+                <br> dag op 26 febuari van 15.00 - 20.00 uur en
+                 <br>ervaar het zelf.</p>
+     </div>
+     
+
+
+     <div class="countdown">
+        <p>OPEN DAG</p>
+        <h1>Ben jij erbij?</h1>
+
+        <div class="timer">
+            <div>
+                <p id="dagen">00</p>
+                <span>Dagen</span>
+            </div>
+            <div>
+                <p id="uur">00</p>
+                <span>Uur</span>
+            </div>
+            <div>
+                <p id="minuten">00</p>
+                <span>Minuten</span>
+            </div>
+            <div>
+                <p id="secondes">00</p>
+                <span>Secondes</span>
+            </div>
+            
+        </div>
+
+        <a href="https://www.techniekcollegerotterdam.nl/studeren-bij-ons/open-dag" target="_blank"><button>Meer informatie <img src="rechts.png" width="15px"></button></a>
+     </div>
+
+     <script>
+        var countDownDate = new Date("Jan 26, 2024 15:00:00").getTime();    //de datum
+        var x = setInterval(function(){     //de interval wordt ingesteld om elke seconden(1000ms) de functie uit te voeren die tijd berekent
+            var now = new Date().getTime();     // dit berekent de resterende tijd
+            var distance = countDownDate - now;
+
+            var dagen = Math.floor(distance / (1000 * 60 * 60 * 24));  //het tijds verschil word omgerekend naar dagen, uren, minuten en secondes
+            var uur = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minuten = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var secondes = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("dagen").innerHTML = dagen  // De berekende waarden worden ingevoegd in HTML-elementen om de countdown weer te geven
+            document.getElementById("uur").innerHTML = uur
+            document.getElementById("minuten").innerHTML = minuten
+            document.getElementById("secondes").innerHTML = secondes
+
+            if(distance < 0){
+                clearInterval(x);
+                document.getElementById("dagen").innerHTML = "00";      // Als de countdown is afgelopen dus de distance tot de einddatum kleiner
+                document.getElementById("uur").innerHTML = "00";        // is dan wordt de interval gestopt en word er 00 weergegeven zodut de
+                document.getElementById("minuten").innerHTML = "00";    // getallen niet in de min komen te staan
+                document.getElementById("secondes").innerHTML = "00";
+            }
+
+        },1000);        // dit is de 1000ms die ervoor zorgt dat het om de seconde word bijgewerkt
+
+
+     </script>
+
+
+     <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="P2inloggen.html">Inloggen</a>
+        <a href="https://www.techniekcollegerotterdam.nl/over-techniek-college-rotterdam">Informatie</a>
+        <a href="inschrijven1.html">Inschrijven</a>
+        <a href="P2contact.html">Contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()"><img src="menu.png" width="50px"></button>  
+      
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";    // De breedte van de sidepanel als die dicht open is //
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";    // De breedte van de sidepanel als die dicht is //
+      }
+      </script>
+
+
+</body>
+</html>

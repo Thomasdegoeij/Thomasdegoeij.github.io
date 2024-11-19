@@ -1,0 +1,113 @@
+@font-face {
+    font-family: Font1;
+    src: url(font/Poppins.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Font1;
+}
+
+body {
+    background-image: url(afbeeldingen/background.jpg);
+    background-size: cover;
+}
+
+#pagina {
+    background-color: #D8D9DA;
+    color: #272829;
+    text-align: center;
+    font-size: 1.7em;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+#homebutton {
+    background-color: #D8D9DA;
+    text-align: center;
+    width: 60px;
+    padding: 8px;
+    border-radius: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 6px 0 0 #61677A;
+
+}
+
+#homebutton:hover {
+    background-image: url(afbeeldingen/background.jpg);
+    background-size:contain;
+    border: solid 1px white;
+    color: white;
+}
+
+#huis:hover {
+    filter: invert(1);
+}
+
+#homebutton:active {
+  background-color: #787e91;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#achtergrond {
+    width: 99vw;
+    height: 83vh;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.portfolio {
+    width: 54%;
+    height: 530px;
+    margin-top: 110px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: #b5b5b5;
+    border-radius: 80px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#PortfolioText{
+    background: #d3d3d300;
+    color: #272829;
+    font-size: 25px;
+    width: 93%;
+    height: 90%;
+    padding-right: 20px;
+    border-radius: 5px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 25px;
+    left: 25px; 
+}
+
+#rechts {
+position: absolute;
+top: 54%;
+right: 15px;
+}
+
+#rechts:hover {
+    opacity: 80%;
+}
+
+#wie {
+    position: absolute;
+    right: 70px;
+    top: 140px;
+}
+
+img#wiefoto {
+    border-radius: 80px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}

@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Font1;
+    src: url(font/Poppins.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Font1;
+}
+
+body {
+    background-image: url(afbeeldingen/background.jpg);
+    background-size: cover;
+}
+
+#pagina {
+    background-color: #D8D9DA;
+    color: #272829;
+    text-align: center;
+    font-size: 1.7em;
+    width: 300px;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+#homebutton {
+    background-color: #D8D9DA;
+    text-align: center;
+    width: 60px;
+    padding: 8px;
+    border-radius: 25px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 6px 0 0 #61677A;
+
+}
+
+#homebutton:hover {
+    background-image: url(afbeeldingen/background.jpg);
+    background-size:contain;
+    border: solid 1px white;
+    color: white;
+}
+
+#huis:hover {
+    filter: invert(1);
+}
+
+#homebutton:active {
+  background-color: #787e91;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+#achtergrond {
+    width: 99vw;
+    height: 83vh;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.achter {
+    width: 90vw;
+    height: 75vh;
+    margin-top: 110px;
+    position: absolute;
+    top: 30px;
+    left: 80px;
+    border-radius: 80px;
+}
+.achter h1 {
+    color: #f2f2f2;
+    text-align: center;
+}
+
+table, td, th {
+    text-align: left;
+    padding: 4px;
+  } 
+  
+  table {
+    font-size: 25px;
+    width: 95%;
+    border-collapse: collapse;
+    margin: auto;
+    margin-top: 20px;
+    text-align: left;
+    background-color: #a9a9a9;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #61677A;
+  color: white;
+}
+
+#links {
+    position: absolute;
+    top: 54%;
+    left: 15px;
+    }
+
+    #links:hover {
+    opacity: 80%;
+    }
+
+#rechts {
+    position: absolute;
+    top: 54%;
+    right: 15px;
+    }
+
+#rechts:hover {
+    opacity: 80%;
+    }

@@ -1,210 +1,339 @@
-@font-face {
-    font-family: font1;
-    src: url(font/Copyduck.ttf);
-  }
-
-*{
-    font-family: font1;
-}
-
+/* Algemeen Stijlen */
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 20px;
     text-align: center;
-    background-image: url(afbeeldingen/background.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    user-select: none;
 }
 
-h1 {
-    font-size: 50px;
-    color: #653f19;
-    margin: 20px 0 10px 0;
-}
- 
-h2 {
-    margin-bottom: 0;
-    color: #653f19;
-}
-
-#cookie {
-    width: 225px;
-    cursor: pointer;
+/* Achtergrond & Hoofdpagina */
+#hoofdpagina {
+    background-image: url('afbeeldingen/background.png'); /* Achtergrondafbeelding */
+    background-size: cover; /* Bedek hele sectie */
+    background-position: center; /* Centreer afbeelding */
+    background-repeat: no-repeat; /* Geen herhaling */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Tekst leesbaarheid */
 }
 
-#cookie:hover, button:hover {
-    transform: scale(1.05);
-    transition: transform 0.1s ease;
+#hoofdpagina h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-#cookie:active, button:active {
-    transform: scale(0.9);
-    transition: transform 0.1s ease;
+/* Algemene Sectie Stijlen */
+section:nth-child(odd) {
+    background-color: #f0f8ff; /* Lichtblauw */
 }
 
-
-button {
-    color: #653f19;
-    background-color: #f1a843;
-    width: 250px;
-    height: 75px;
-    padding: 10px 50px;
-    border-radius: 25px;
-    border: solid 5px #a36424;
-    font-size: 15px;
-    cursor: pointer;
-    margin: 20px 10px 0 10px;
+section:nth-child(even) {
+    background-color: #ffffff; /* Wit */
 }
 
-button:disabled {
-    opacity: 20%;
-    cursor: not-allowed;
+section h2 {
+    font-size: 3em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-
-
-.flex-container {
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    max-width: 540px;
-    margin: 0 auto;
-  }
-
-.button-wrapper {
-    position: relative;
-    display: inline-block;
+    gap: 20px;
+    font-size: 0.9em;
+    z-index: 1000;
 }
 
-/* Standaard is het info-vakje verborgen */
-.info {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: -180px; /* Links van de knop */
-    transform: translateY(-50%);
-    width: max-content;
-    padding: 5px;
-    background-color: #f9f9f9;
-    border: 1px solid #000000;
-    border-radius: 5px;
-    font-size: 14px;
-    z-index: 10;
-    font-family: Arial, Helvetica, sans-serif;
+footer a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-/* Specifieke styling voor info-vakjes aan de rechterkant */
-.info-rechts {
-    left: 280px; /* Rechts van de knop */
+footer a:hover {
+    color: #00bfff;
 }
 
-/* Zorg ervoor dat het info-vakje verschijnt wanneer je over de knop hovert */
-.button-wrapper:hover .info {
-    display: block;
-}
-
-  #icon {
+footer img {
     width: 20px;
-  }
+    height: 20px;
+    object-fit: contain;
+}
 
-  #overzicht {
-    background-color: #00000020;
-    font-size: 20px;
-    color: #653f19;
-  }
+footer span {
+    font-size: 0.9em;
+}
 
-  #theme-switcher {
-    position: absolute;
-    right: 20px;
-    top: 220px;
-    transform: translateY(-50%);
-    background-color: #e0a655;
-    padding: 10px;
+/* Profielfoto */
+.profielfoto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Pagina 1 */
+#pagina1 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#pagina1 p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* Pagina 2 */
+.opleiding-foto {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#pagina2 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#pagina2 p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* Pagina 3 (Vaardigheden) */
+.skills {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill span {
+    display: inline-block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.progress {
+    background-color: #e0e0e0;
     border-radius: 10px;
-    border: solid 2px #a36424;
-    color: #653f19;
-    font-size: 16px;
+    overflow: hidden;
+    height: 20px;
+    width: 100%;
 }
 
-#theme-switcher select {
-    padding: 5px;
-    border-radius: 5px;
-    border: solid 1px #000000;
-    cursor: pointer;
-}
-
-@media screen and (max-width: 870px) {
-    #theme-switcher {
-        top: 240px;
-        right: 10px;
-        width: 120px;
-        padding: 5px;
-        font-size: 14px;
-    }
-
-    #theme-switcher select {
-        width: 100%;
-        font-size: 14px;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    #theme-switcher {
-        width: 100px;
-        padding: 5px;
-        right: 5px;
-        font-size: 12px;
-    }
-
-    #theme-switcher select {
-        font-size: 12px;
-    }
-}
-
-
-
-.small-cookie {
-    position: absolute;
-    width: 50px; /* Pas aan voor de grootte van het kleine koekje */
-    pointer-events: none; /* Zorgt ervoor dat het kleine koekje niet klikbaar is */
-    transition: transform 2s ease-out, opacity 2s ease-out;
-}
-
-.fade-out {
-    transform: translateY(-200px); /* Verplaats het koekje omhoog */
-    opacity: 0; /* Laat het koekje verdwijnen */
-}
-
-
-#reset {
-    position: absolute;
-    height: fit-content;
-    width: 280px;
-    right: 10px;
-    top: 150px;
-    transform: translateY(-50%);
-    background-color: #e0a655;
+.progress-bar {
+    height: 100%;
     border-radius: 10px;
-    border: solid 2px #a36424;
-    color: #653f19;
-    font-size: 16px;
+    background-color: #87CEFA;
+    transition: width 0.5s ease-in-out;
 }
 
-@media screen and (max-width: 870px) {
-    #reset {
-        top: 160px;
-        right: 10px;
+/* Specifieke vaardigheid breedtes */
+.progress-bar.html { width: 90%; }
+.progress-bar.css { width: 80%; }
+.progress-bar.javascript { width: 60%; }
+.progress-bar.php { width: 40%; }
+
+/* Pagina 4 (Werkervaring) */
+.werkervaring-foto {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#pagina4 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#pagina4 p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 700px;
+}
+
+/* Pagina 5 (Projecten) */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.project h3 {
+    font-size: 1.5em;
+    margin: 10px;
+    color: #333;
+}
+
+.project p {
+    font-size: 1em;
+    margin: 10px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.project-link {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 12px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
+#pagina5 {
+    margin-bottom: 30px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    footer {
+        font-size: 0.8em;
+        gap: 15px;
+    }
+
+    footer img {
+        width: 18px;
+        height: 18px;
+    }
+
+    footer a {
+        gap: 5px;
+    }
+
+    #pagina1 .content,
+    #pagina2 .content,
+    #pagina4 .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profielfoto {
         width: 120px;
-        padding: 5px;
-        font-size: 14px;
+        height: 120px;
+    }
+
+    .opleiding-foto,
+    .werkervaring-foto {
+        width: 250px;
+    }
+
+    #pagina1 p,
+    #pagina2 p,
+    #pagina4 p {
+        font-size: 1em;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+
+    section h2 {
+        font-size: 2.5em;
     }
 }
 
-@media screen and (max-width: 540px) {
-    #reset {
-        top: 165px;
+@media (max-width: 480px) {
+    footer {
+        font-size: 0.7em;
+        gap: 10px;
+    }
+
+    footer img {
+        width: 16px;
+        height: 16px;
+    }
+
+    footer a {
+        gap: 3px;
+    }
+
+    .profielfoto {
         width: 100px;
-        padding: 5px;
-        font-size: 12px;
+        height: 100px;
+    }
+
+    .opleiding-foto,
+    .werkervaring-foto {
+        width: 200px;
+    }
+
+    section h2 {
+        font-size: 2em;
+    }
+
+    #pagina1 p,
+    #pagina2 p,
+    #pagina4 p {
+        font-size: 0.9em;
     }
 }

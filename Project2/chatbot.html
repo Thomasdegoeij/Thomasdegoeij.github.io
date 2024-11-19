@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="chatbot.css">
+    <title>P2 Chatbot</title>
+</head>
+
+<body>
+
+    <div class="menu-icon">
+        <img src="menu.png" width="53px">
+      </div>
+
+    <div class="logo">
+        <a href="Project2Home.html"><img src="TCR (1).png" width="70px"></a>
+       </div>
+
+
+       <div class="navbar">
+        <ul>
+          <li><a href="Project2Home.html">HOME</a></li>
+          <li><a href="chatbot.html">CHATBOT</a></li>
+          <li><a href="countdown1.html">OPENDAG</a></li>
+          <li><a href="P2quiz.html">QUIZ</a></li>
+          <li><a href="talenttree.html">TALENTTREE</a></li>
+          </ul>
+    </div>
+
+    
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="P2inloggen.html">Inloggen</a>
+        <a href="https://www.techniekcollegerotterdam.nl/over-techniek-college-rotterdam">Informatie</a>
+        <a href="inschrijven1.html">Inschrijven</a>
+        <a href="P2contact.html">Contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()"><img src="menu.png" width="50px"></button>  
+      
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+      </script>
+    
+
+    <div class="chat-container">
+        <div class="chat-box" id="chatBox">
+            <div class="chat-message bot">Hoe kan ik u helpen?
+            </div>
+        </div>
+
+        <input type="text" id="userInput" placeholder="Typ hier je bericht...">
+        <button onclick="sendMessage()">Verstuur</button>
+
+        <script>
+            // Antwoord en vragen
+            const responses = {
+                "HALLO": "Hallo hoe gaat het?",
+                "WANNEER IS DE OPENDAG": "Vrijdag 12 Januari - 15:00 tot 20:00",
+                "OPENDAG": "Vrijdag 12 Januari - 15:00 tot 20:00",
+                "WANNEER": "Vrijdag 12 Januari - 15:00 tot 20:00",
+                "WAAR": "Prins Alexanderlaan 55, 3067 GB Rotterdam",
+                "WELKE JAAR IS HET": "We zitten in het jaar 2024",
+                "WELKE MAAND IS HET":"We zitten in de maand Januari",
+                "WELKE SEIZOEN IS HET": "Het is op dit moment winter",
+                "HOEVEEL OPLEIDINGEN ZIJN ER":"Er zijn er 124 opleidingen",
+                "WIE HEEFT DE VERKIEZINGEN GEWONNEN":"Geert Wilders heeft de verkiezingen gewonnen",
+                "WAT IS JE LEEFTIJD":"Ik heb geen leeftijd ik ben een bot",
+                "WAT BEN JE":"Ik ben een chatbot die je helpt",
+                "WIE HEEFT JOU GEMAAKT":"Luka heeft mij gemaakt",
+                "KAN JE ME EEN MOP VERTELLEN":"Hoe noem je een koninklijke drol? Antwoord: Een majeschijt.",
+                "WAT IS 2+2":"De antwoord is 4",
+            }
+
+            function sendMessage() {
+                const userInput = document.getElementById('userInput');
+
+                const chatBox = document.getElementById('chatBox');
+
+                // Invoer persoon
+                const userMessage = userInput.value.trim();
+
+                // Typen tekst
+                chatBox.innerHTML += userMessage; //`<div class="chat-message">${userMessage}</div>`;
+
+                // Input weg
+                userInput.value = '';
+
+                // Chatbot reactie vraag
+                const botResponse = responses[userMessage.toUpperCase()];
+
+                // Chatbot reactie van fout melding
+                const messageToDisplay = botResponse ? botResponse : "Ik begrijp dit niet!";
+
+                chatBox.innerHTML += `<div class="chat-message bot">${messageToDisplay}</div>`;
+
+                // Scroll lengte
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        </script>
+        
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+*{
+  font-family: 'Barlow', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(achtergrond.png);
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.chat-container {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.chat-box {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.chat-message {
+  margin: 10px 0;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.chat-message.bot {
+  background-color: #e0e0e0;
+}
+
+input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  border-top: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+button {
+  width: calc(100% - 0px);
+  padding: 10px;
+  background-color: #006445;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #028058;
+}
+.logo{
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+a{
+  text-decoration: none;
+  color: #dbff4a;
+  }
+  
+  .navbar{
+  width: 49%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50px;
+  right: -60px;
+  font-weight: bold;
+  font-size: 1.5em;
+  }
+  .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+    top: 0px;
+    right: 100px;
+  }
+  .navbar ul li a{
+    text-decoration: none;
+    color: #dbff4a;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: relative;
+    font-size: 1.0em;
+  }
+  .navbar ul li::after{
+    content: '';
+    height: 4px;
+    width: 0;
+    background-color: #dbff4a;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: 0.5s;
+  }
+  .navbar ul li:hover::after{
+    width: 100%;
+  
+  }
+  
+
+script{
+color: #dbff4a;
+font-size: 2em;
+position: absolute;
+top: 10px;
+left: 500px;
+}
+
+
+.sidepanel  {
+width: 0;
+position: fixed;
+z-index: 1;
+height: 200px;
+top: 0;
+right: 0;
+background-color: #006445;
+overflow-x: hidden;
+transition: 0.5s;
+padding-top: 60px;
+border-radius: 18px;
+}
+
+.sidepanel a {
+padding: 8px 8px 8px 32px;
+text-decoration: none;
+font-size: 25px;
+color: #dbff4a;
+display: block;
+transition: 0.3s;
+}
+
+.sidepanel a:hover {
+color: #f1f1f1;
+}
+
+.sidepanel .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+color: #dbff4a;
+}
+
+.openbtn {
+cursor: pointer;
+position: absolute;
+top: 55px;
+right: 120px;
+background-color: #006445;
+opacity: 0%;
+width: 3vw;
+height: 6vh;
+}
+.menu-icon{
+  position: absolute;
+  top: 61px;
+  right: 100px;
+  cursor: pointer;
+  width: 60px;
+
+}
+

@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;    
+   
+   }
+   a{
+       color: white;
+   }
+   .contact-info{
+    color: #dbff4a;
+    font-size: 20px;
+    max-width: 500px;
+    line-height: 65px;
+    padding-left: 50px;
+    position: absolute;
+    top: 215px;
+   }
+   h1{
+    color: #dbff4a;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 90px;
+    left: 585px;
+   }
+   .logo{
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    }
+.hero{
+    background-color: grey;
+    background-image: url(MicrosoftTeams-image.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+}
+form{
+width: 90%;
+max-width: 600px;
+position: absolute;
+top: 170px;
+left: 450px;
+font-size: 1em;
+}
+.input-group{
+    margin-bottom: 30px;
+    color: #dbff4a;
+    position: relative;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    outline: 0;
+    border: 1px solid #dbff4a;
+    color: #dbff4a;
+    background: transparent;
+    font-size: 15px;
+    backdrop-filter: blur(20px);
+}
+label{
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    color: #dbff4a;
+    cursor: text;
+    transition: 0.2s;
+}
+button{
+    padding: 10px 0;
+    color: #dbff4a;
+    outline: none;
+    background: transparent;
+    border: 1px solid #dbff4a;
+    width: 100%;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+}
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+    top: -35px;
+    font-size: 14px;  
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.row .input-group{
+  flex-basis: 48%;
+}

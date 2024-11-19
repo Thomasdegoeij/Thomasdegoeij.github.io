@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="talenttree.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <title>Talenttree</title>
+</head>
+<body>
+
+    
+
+    <div class="menu-icon">
+        <img src="menu.png" width="53px">
+      </div>
+
+
+    <div class="container">
+        <a href="Project2Home.html"><img src="TCR (1).png" width="70px"></a>
+       </div>
+
+      
+       <div class="navbar">
+        <ul>
+          <li><a href="Project2Home.html">HOME</a></li>
+          <li><a href="chatbot.html">CHATBOT</a></li>
+          <li><a href="countdown1.html">OPENDAG</a></li>
+          <li><a href="P2quiz.html">QUIZ</a></li>
+          <li><a href="talenttree.html">TALENTTREE</a></li>
+          </ul>
+    </div>
+
+    
+
+
+<h1>Talenttree</h1>
+
+
+
+    <form id="talenttree" onsubmit="controleer()">
+        <label>Kan je met HTML werken?<label>
+        <br><br>
+        <input type="radio" name="html" value="ja" id="ja" onclick="toonCss()" > <label for="ja">Ja</label>
+        
+        <input type="radio" name="html" value="nee" id="nee"> <label for="nee">Nee</label>
+        <br><br><br>
+
+        <div id="cssVraag" style="display: none;">
+            <label>Kan je werken met CSS</label>
+            <br><br>
+            <input type="radio" name="css" value="ja" id="cssJa" onclick="toonJs()"> <label for="cssJa">Ja</label>
+            
+            <input type="radio" name="css" value="nee" id="cssNee"> <label for="cssNee">Nee</label>
+            <br><br><br>
+
+            <div id="jsVraag" style="display: none;">
+            <label>Kun je werken met Javascript?</label>
+            <br><br>
+            <input type="radio" name="js" value="ja" id="jsJa"><label for="jsJa">Ja</label>
+            
+            <input type="radio" name="js" value="nee" id="jsNee"> <label for="jsNee">Nee</label>
+            <br><br><br>
+            </div>
+        </div>
+                <input type="submit" value="Verzenden">
+    </form>
+
+    <script>
+        function toonCss() {
+            // Als je op ja klikt komt de tweede vraag
+            var jaRadio = document.getElementById("ja");
+            var cssVraag = document.getElementById("cssVraag");
+    
+            if (jaRadio.checked) {
+                cssVraag.style.display = "block";
+            } else {
+                cssVraag.style.display = "none";
+            }
+        }
+    
+        function toonJs() {
+            // Toon de derde vraag als het antwoord op de tweede vraag "Ja" is
+            var cssJaRadio = document.getElementById("cssJa");
+            var jsVraag = document.getElementById("jsVraag");
+    
+            if (cssJaRadio.checked) {
+                jsVraag.style.display = "block";
+            } else {
+                jsVraag.style.display = "none";
+            }
+        }
+    
+        function controleer() {
+            // dit haalt de waarde op van de geselecteerde button
+            var html = document.querySelector('input[name="html"]:checked');
+    
+            // Controleer of een button is geselecteerd voor de eerste vraag
+            if (html) {
+                // Als het antwoord ja is controleer dit dan het antwoord op de tweede vraag
+                if (html.value === "ja") {
+                    var css = document.querySelector('input[name="css"]:checked');
+                    if (css) {
+                        // Als het antwoord jaa is controleerd dit dan het antwoord op de derde vraag
+                        if (css.value === "ja") {
+                            var js = document.querySelector('input[name="js"]:checked');
+                            if (js) {
+                                if (js.value === "ja") {
+                                    alert("Goed bezig, je kunt met HTML, CSS en JavaScript werken!");
+                                } else {
+                                    alert("Je kunt al met HTML en CSS werken, probeer nu Javascript te leren!");
+                                }
+                            } else {
+                                alert("Je hebt nog niet alle vragen beantwoord!");
+                                // zorgt dat het formulier niet word verzonden
+                                event.preventDefault();
+                            }
+                        } else {
+                            alert("Je kunt met HTML werken, probeer nu om met CSS te kunnen werken om jou website er leuk uit te laten zien!");
+                        }
+                    } else {
+                        alert("Je hebt nog niet alle vragen beantwoord!");
+                        // Weer dat het niet wordt verzonden
+                        event.preventDefault();
+                    }
+                } else {
+                    alert("Probeer eerst HTML te leren voordat je verder gaat met de vragen.");
+                }
+            } else {
+                alert("Je hebt nog niet alle vragen beantwoord!");
+                // Niet word verzonden
+                event.preventDefault();
+            }
+        }
+    </script>
+    
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="P2inloggen.html">Inloggen</a>
+        <a href="https://www.techniekcollegerotterdam.nl/over-techniek-college-rotterdam">Informatie</a>
+        <a href="inschrijven1.html">Inschrijven</a>
+        <a href="P2contact.html">Contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()"><img src="menu.png" width="50px"></button>  
+      
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+      </script>
+</body>
+</html>

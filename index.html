@@ -1,72 +1,135 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CookieClicker</title>
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas de Goeij</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="overzicht">
-            Auto Clicker:       <span id="upgrades1">0</span>           <span style="color: black;">|</span>
-            Clicker x2:         <span id="upgrades2">0</span>           <span style="color: black;">|</span>
-            Koekjes Oven:       <span id="upgrades3">0</span>           <span style="color: black;">|</span>
-            Koekjes Bakkerij:   <span id="upgrades4">0</span>           <span style="color: black;">|</span>
-            Koekjes Fabriek:    <span id="upgrades5">0</span>           <span style="color: black;">|</span>
-            Koekjes Mijn:       <span id="upgrades6">0</span>   <br>
-            <span id="cps">Cookies per seconde: 0</span>
-        </div>
+    <section id="hoofdpagina">
+        <h1>Thomas de Goeij</h1>
+    </section>
+    <main>
+        <section id="pagina1">
+            <h2>Over Mij</h2>
+            <div class="content">
+                <img src="afbeeldingen/profielfoto.jpg" alt="Profielfoto" class="profielfoto">
+                <p>
+                    Als bevlogen en nauwkeurige student aan het Techniek College op niveau mbo 4, heb ik een sterke passie voor ICT en een goede werkinstelling ontwikkeld. Ik ben toegewijd aan het voltooien van mijn taken met de hoogste mate van precisie en kwaliteit. Mijn opleiding heeft mij voorzien van veel kennis en ervaring, waardoor ik goed voorbereid ben op uitdagingen binnen de technische sector.
+                </p>
+            </div>
+        </section>
         
-        <h1>Cookie Clicker</h1>
-        <img id="cookie" src="afbeeldingen/cookie.png" alt="cookie" draggable="false">
-        <h2>Koekjes: <span id="score">0</span></h2>
-
-        <div class="flex-container">
-            <div class="button-wrapper">
-                <button id="koopUpgrade1">Auto Clicker <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">15</button>
-                <div class="info">1 cookie per seconde</div>
+        <section id="pagina2">
+            <h2>Opleidingen</h2>
+            <div class="content">
+                <img src="afbeeldingen/sod.jpg" alt="Opleidingsfoto" class="opleiding-foto">
+                <p>
+                    <span style="font-size: 26px;"><b>Techniek College Rotterdam</b></span><br>
+                    Prins Alexanderlaan 55, 3067 GB Rotterdam<br>
+                    • Mbo 4 Software Developer - aug 2023 - heden
+                </p>
             </div>
-            <div class="button-wrapper">
-                <button id="koopUpgrade2">Clicker x2 <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">500</button>
-                <div class="info info-rechts">Verdubbelt je klik</div>
-            </div>
-            <div class="button-wrapper">
-                <button id="koopUpgrade3">Koekjes Oven <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">100</button>
-                <div class="info">6 cookies per seconde</div>
-            </div>
-            <div class="button-wrapper">
-                <button id="koopUpgrade4">Koekjes bakkerij <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">1.100</button>
-                <div class="info info-rechts">32 cookies per seconde</div>
-            </div>
-            <div class="button-wrapper">
-                <button id="koopUpgrade5">Koekjes Fabriek <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">12.000</button>
-                <div class="info">94 cookies per seconde</div>
-            </div>
-            <div class="button-wrapper">
-                <button id="koopUpgrade6">Koekjes Mijn <br> <img id="icon" src="afbeeldingen/cookie.png" draggable="false">130.000</button>
-                <div class="info info-rechts">956 cookies per seconde</div>
-            </div>
-        </div>
-
-        <div id="theme-switcher">
-            <label for="theme">Selecteer Thema:</label>
-            <select id="theme" onchange="changeTheme()">
-                <option value="default">Standaard</option>
-                <option value="blauw">Blauw</option>
-                <option value="rood">Rood</option>
-                <option value="voetbal">Voetbal</option>
-            </select>
-        </div>
-
-        <button id="reset" onclick="resetProgress()">Reset Voortgang</button>
-
-
+        </section>
         
-        <script src="script.js"></script>
-        <script src="thema.js"></script>
-        <script src="cookie.js"></script>
+        <section id="pagina3">
+            <h2>Kennis en Vaardigheden</h2>
+            <div class="skills">
+                <div class="skill">
+                    <span>HTML</span>
+                    <div class="progress">
+                        <div class="progress-bar html"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>CSS</span>
+                    <div class="progress">
+                        <div class="progress-bar css"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>JavaScript</span>
+                    <div class="progress">
+                        <div class="progress-bar javascript"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <span>PHP</span>
+                    <div class="progress">
+                        <div class="progress-bar php"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="pagina4">
+            <h2>Werkervaring</h2>
+            <div class="content">
+                <img src="afbeeldingen/deberen.jpg" alt="Werkervaringfoto" class="werkervaring-foto">
+                <p>
+                    <span style="font-size: 26px;"><b>De Beren Alexandrium</b></span><br>
+                    Kleine Beer 21, 3067 LW Rotterdam<br>
+                    • Parttime bezorger nov 2023 - heden
+                </p>
+            </div>
+        </section>
+        <section id="pagina5">
+            <h2>Mijn Projecten</h2>
+            <div class="project-container">
+                <!-- Project 1 -->
+                <div class="project">
+                    <img src="afbeeldingen/Project1.png" alt="Project 1" class="project-image">
+                    <h3>Project 1</h3>
+                    <p>
+                        Dit is mijn eerste zelfgemaakte website en ik ben super trots op het resultaat. 
+                        Het was een uitdaging, maar ik heb veel geleerd en kijk uit naar wat ik nog meer kan maken!
+                    </p>
+                    <a href="Project1/home.html" target="_blank" class="project-link">Bekijk project</a>
+                </div>
+                <!-- Project 2 -->
+                <div class="project">
+                    <img src="afbeeldingen/Project2.png" alt="Project 2" class="project-image">
+                    <h3>Project 2</h3>
+                    <p>
+                        Mijn tweede project was een groepswerk en hoewel het resultaat prima is, vind ik het zelf wat rommelig. 
+                        Ik heb er veel van geleerd voor de volgende keer.
+                    </p>
+                    <a href="Project2/Project2Home.html" target="_blank" class="project-link">Bekijk project</a>
+                </div>
+                <!-- Project 3 -->
+                <div class="project">
+                    <img src="afbeeldingen/Project3.png" alt="Project 3" class="project-image">
+                    <h3>Project 3</h3>
+                    <p>
+                        Mijn laatste project was een zelfgemaakte Cookie Clicker in JavaScript met OOP. Ik ben echt trots
+                         op het resultaat en het was een geweldige ervaring waar ik veel van geleerd heb!
+                    </p>
+                    <a href="Project3/index.html" target="_blank" class="project-link">Bekijk project</a>
+                </div>
+            </div>
+        </section>
         
 
-    </body>
-    </html>
+    </main>
+    <footer>
+        <a href="mailto:9022371@student.zadkine.nl" title="Email">
+            <img src="afbeeldingen/email.png" alt="Email" />
+            <span>9022371@student.zadkine.nl</span>
+        </a>
+        <a href="tel:0638429482" title="Telefoon">
+            <img src="afbeeldingen/phone.png" alt="Telefoon" />
+            <span>06 38429482</span>
+        </a>
+        <a href="https://github.com/Thomasdegoeij" target="_blank" title="GitHub">
+            <img src="afbeeldingen/github.png" alt="GitHub" />
+            <span>Thomasdegoeij</span>
+        </a>
+    </footer>
+    
+    
+
+    
+</body>
+</html>

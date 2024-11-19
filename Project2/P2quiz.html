@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="P2quiz.css">
+    <title>P2 Quiz</title>
+</head>
+<body>
+
+    <div class="logo">
+        <a href="Project2Home.html"><img src="TCR (1).png" width="70px"></a>
+    </div>
+
+    
+    <div class="menu-icon">
+        <img src="menu.png" width="53px">
+      </div>
+
+
+    <div class="navbar">
+        <ul>
+          <li><a href="Project2Home.html">HOME</a></li>
+          <li><a href="chatbot.html">CHATBOT</a></li>
+          <li><a href="countdown1.html">OPENDAG</a></li>
+          <li><a href="P2quiz.html">QUIZ</a></li>
+          <li><a href="talenttree.html">TALENTTREE</a></li>
+          </ul>
+    </div>
+
+
+
+
+    <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <h2 id="question">Question Text</h2>
+          <ul>
+            <li>
+              <input type="radio" name="answer" id="a" class="answer">
+              <label for="a" id="a_text">Answer</label>
+            </li>
+            <li>
+              <input type="radio" name="answer" id="b" class="answer">
+              <label for="b" id="b_text">Answer</label>
+            </li>
+            <li>
+              <input type="radio" name="answer" id="c" class="answer">
+              <label for="c" id="c_text">Answer</label>
+            </li>
+            <li>
+              <input type="radio" name="answer" id="d" class="answer">
+              <label for="d" id="d_text">Answer</label>
+            </li>
+          </ul>
+        </div>
+        <button id="submit">Indienen</button>
+      </div>
+
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="P2inloggen.html">Inloggen</a>
+        <a href="https://www.techniekcollegerotterdam.nl/over-techniek-college-rotterdam">Informatie</a>
+        <a href="inschrijven.html">Inschrijven</a>
+        <a href="P2contact.html">Contact</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()"><img src="menu.png" width="50px"></button>  
+
+
+      <script>
+        const quizData = [      // De start van een array waar je gegevens in kan zetten //
+    {
+        question: "Hoelang duurt het opleiding Software Developer?",
+        a: "2 jaar",
+        b: "4 jaar",
+        c: "1 jaar",
+        d: "5 jaar",
+        correct: "b",
+    },
+    {
+        question: "In hoeveel jaar kan je het minst het opleiding Software Developer doen?",
+        a: "Kan niet",
+        b: "2 jaar",
+        c: "3 jaar",
+        d: "1 jaar",
+        correct: "c",
+    },
+    {
+        question: "Hoe oud is Ziad?",
+        a: "17 jaar",
+        b: "18 jaar",
+        c: "16 jaar",
+        d: "19 jaar",
+        correct: "a",
+    },
+    {
+        question: "Hoe heet deze school?",
+        a: "Grafische Lyceum",
+        b: "Albeda",
+        c: "Zadkine",
+        d: "TCR",
+        correct: "d",
+    },
+    {
+        question: "Welke jaar is het?",
+        a: "2024",
+        b: "2023",
+        c: "2022",
+        d: "2025",
+        correct: "a",
+    },
+    {
+        question: "Hoe heet de planeet waar wij op leven?",
+        a: "Pluto",
+        b: "Aarde",
+        c: "De maan",
+        d: "Jupiter",
+        correct: "b",
+    },
+    {
+        question: "Hoeveel mensen wonen er in NL?",
+        a: "19,8 Miljoen",
+        b: "20,1 Miljoen",
+        c: "17,5 Miljoen",
+        d: "16,3 Miljoen",
+        correct: "c",
+    },
+    {
+        question: "Wie is de koning van NL?",
+        a: "Willem-Alexander",
+        b: "Willem I",
+        c: "Willem III",
+        d: "Willem II",
+        correct: "a",
+    },
+    {
+        question: "Wie is  de Koningin van NL?",
+        a: "Juliana",
+        b: "Maxima",
+        c: "Emma",
+        d: "Beatrix",
+        correct: "b",
+    },
+    {
+        question: "Hoeveel mensen zijn er op aarde?",
+        a: "7,8 Miljard",
+        b: "10,2 Miljard",
+        c: "8,4 Miljard",
+        d: "8 Miljard",
+        correct: "d",
+    },
+    {
+        question: "Welke team heeft de wereld beker gewonnen in 1982",
+        a: "Engeland",
+        b: "Italie",
+        c: "Argentinie",
+        d: "Brazilie",
+        correct: "b",
+    },
+    {
+        question: "Welke team heeft de UCL gewonnen in 2001?",
+        a: "Bayern",
+        b: "Man United",
+        c: "Valencia",
+        d: "Barca",
+        correct: "a",
+    },
+    {
+        question: "Welke voetbal team is het beste?",
+        a: "Real Madrid",
+        b: "Barca",
+        c: "Bayern",
+        d: "Man City",
+        correct: "a",
+    },
+    {
+        question: "Wie is de beste voetbalspeler?",
+        a: "Harry Maguire",
+        b: "Lionel Messi",
+        c: "Cristiano Ronaldo",
+        d: "Neymar",
+        correct: "c",
+    },
+    {
+        question: "Wie is de 2de beste voetbalspeler?",
+        a: "Lionel Messi",
+        b: "Kylian Mbappe",
+        c: "Erling Haaland",
+        d: "Harry Maguire",
+        correct: "d",
+    }
+];
+const quiz= document.getElementById('quiz')    // Houdt het HTML element in een variable met de naam quiz //
+const answerEls = document.querySelectorAll('.answer')  // Houdt het HTML element in een variable met de naam answersEls //
+const questionEl = document.getElementById('question')  // Houdt het HTML element in een variable met de naam questionEl //
+const a_text = document.getElementById('a_text')  // Het houdt het HTML element in een variable met de naam a_text zodat je alleen met die code kan werken //
+const b_text = document.getElementById('b_text') 
+const c_text = document.getElementById('c_text')
+const d_text = document.getElementById('d_text')
+const submitBtn = document.getElementById('submit')  // Het voert iets uit als je op de knop element drukt //
+let currentQuiz = 0
+let score = 0
+loadQuiz()
+function loadQuiz() {    // Deze functie met de naam loadquiz wordt gebruikt om de quiz te laden //
+    deselectAnswers()   // Het deselecteerd alle geselecteerde antwoorden //
+    const currentQuizData = quizData[currentQuiz]  // het haalt gegevens uit de array quizdata em slaat ze op in variable currentquizdata //
+    questionEl.innerText = currentQuizData.question // zorgt ervoor dat de vraag wordt weergegeven op de webpagina //
+    a_text.innerText = currentQuizData.a  // het plaatst het antwoord 'a' op de webpagina //
+    b_text.innerText = currentQuizData.b // het plaatst het antwoord 'b' op de webpagina //
+    c_text.innerText = currentQuizData.c // het plaatst het antwoord 'c' op de webpagina //
+    d_text.innerText = currentQuizData.d // het plaatst het antwoord 'c' op de webpagina //
+}
+function deselectAnswers() {
+    answerEls.forEach(answerEl => answerEl.checked = false) // het checked of er geen antwoord is geselecteerd //
+}
+function getSelected() {    // het kijkt welke antwoorden geselecteerd is en dan wordt de id daarvan toegewezen aan de variable answer //
+    let answer
+    answerEls.forEach(answerEl => {
+        if(answerEl.checked) {
+            answer = answerEl.id
+        }
+    })
+    return answer
+}
+submitBtn.addEventListener('click', () => {  // het reageert op een klik met de id sumbitbtn //
+    const answer = getSelected()  // het verhoogt de score als de antwoord goed is //
+    if(answer) {
+       if(answer === quizData[currentQuiz].correct) {
+           score++
+       }
+       currentQuiz++   // het geeft je de andere vragen in je quiz //
+       if(currentQuiz < quizData.length) {
+           loadQuiz()
+       } else {
+           quiz.innerHTML = `
+           <h2>Je hebt ${score}/${quizData.length} vragen goed</h2>
+           <button onclick="location.reload()">Opnieuw?</button>
+           `  // laat zien hoeveel vragen je goed hebt en met een knop om opnieuw te spelen //
+       }
+    }
+})
+
+
+function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px"; // de breedte van de sidepanel als die open is //
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0"; // de breedte van de sidepanel als die dicht is //
+  }
+      </script>
+
+      
+    
+</body>
+</html>
