@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    
 
     <section id="hoofdpagina">
         <h1>Thomas de Goeij</h1>
@@ -116,6 +114,8 @@
                 </div>
             </div>
         </section>
+
+        
     </main>
 
     <footer>
@@ -133,25 +133,28 @@
         </a>
     </footer>
 
-    <script>document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section");
-    
-        function revealOnScroll() {
-            const windowHeight = window.innerHeight;
-            const revealPoint = 150;
-    
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-    
-                if (sectionTop < windowHeight - revealPoint) {
-                    section.classList.add("visible");
-                }
-            });
-        }
-    
-        window.addEventListener("scroll", revealOnScroll);
-        revealOnScroll(); // Initial call for sections already in view
-    });
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        const revealPoint = 150;
+
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+
+            if (sectionTop < windowHeight - revealPoint) {
+                section.classList.add("visible");
+            }
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll(); // Initial call for sections already in view
+});
+
     </script>
+    
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 /* Algemeen Stijlen */
 body {
     font-family: Arial, sans-serif;
@@ -268,15 +269,9 @@ section.visible {
 }
 
 
-
-
 #pagina5 {
-    min-height: 100vh; /* Zorgt ervoor dat de hoogte minimaal 100% van het scherm is */
-    display: flex; /* Hiermee kun je de inhoud centreren */
-    flex-direction: column; /* Zorgt voor verticale uitlijning */
-    justify-content: center; /* Centreert de inhoud verticaal */
+    margin-bottom: 30px;
 }
-
 
 /* Media Queries */
 @media (max-width: 768px) {
