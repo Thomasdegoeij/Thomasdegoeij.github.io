@@ -236,6 +236,7 @@ footer span {
     line-height: 1.6;
 }
 
+/* Nieuwe hover-animatie voor project-links */
 .project-link {
     display: inline-block;
     margin: 10px;
@@ -245,16 +246,37 @@ footer span {
     background-color: #007BFF;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .project-link:hover {
     background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-#pagina5 {
-    margin-bottom: 30px;
+/* Nieuw fade-in effect voor secties */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
 }
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+#pagina5 {
+    min-height: 100vh; /* Zorgt ervoor dat de hoogte minimaal 100% van het scherm is */
+    display: flex; /* Hiermee kun je de inhoud centreren */
+    flex-direction: column; /* Zorgt voor verticale uitlijning */
+    justify-content: center; /* Centreert de inhoud verticaal */
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {

@@ -3,10 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thomas de Goeij - Portfolio van een ICT-enthousiaste student met expertise in HTML, CSS, JavaScript en PHP.">
+    <meta name="keywords" content="ICT, Portfolio, Webdevelopment, MBO Software Developer">
+    <meta name="author" content="Thomas de Goeij">
     <title>Thomas de Goeij</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    
 
     <section id="hoofdpagina">
         <h1>Thomas de Goeij</h1>
@@ -15,7 +20,7 @@
         <section id="pagina1">
             <h2>Over Mij</h2>
             <div class="content">
-                <img src="afbeeldingen/profielfoto.jpg" alt="Profielfoto" class="profielfoto">
+                <img src="afbeeldingen/profielfoto.jpg" alt="Thomas de Goeij profielfoto" class="profielfoto">
                 <p>
                     Als bevlogen en nauwkeurige student aan het Techniek College op niveau mbo 4, heb ik een sterke passie voor ICT en een goede werkinstelling ontwikkeld. Ik ben toegewijd aan het voltooien van mijn taken met de hoogste mate van precisie en kwaliteit. Mijn opleiding heeft mij voorzien van veel kennis en ervaring, waardoor ik goed voorbereid ben op uitdagingen binnen de technische sector.
                 </p>
@@ -25,7 +30,7 @@
         <section id="pagina2">
             <h2>Opleidingen</h2>
             <div class="content">
-                <img src="afbeeldingen/sod.jpg" alt="Opleidingsfoto" class="opleiding-foto">
+                <img src="afbeeldingen/sod.jpg" alt="Afbeelding van Techniek College Rotterdam" class="opleiding-foto">
                 <p>
                     <span style="font-size: 26px;"><b>Techniek College Rotterdam</b></span><br>
                     Prins Alexanderlaan 55, 3067 GB Rotterdam<br>
@@ -40,25 +45,25 @@
                 <div class="skill">
                     <span>HTML</span>
                     <div class="progress">
-                        <div class="progress-bar html"></div>
+                        <div class="progress-bar html" aria-label="HTML vaardigheidsniveau"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <span>CSS</span>
                     <div class="progress">
-                        <div class="progress-bar css"></div>
+                        <div class="progress-bar css" aria-label="CSS vaardigheidsniveau"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <span>JavaScript</span>
                     <div class="progress">
-                        <div class="progress-bar javascript"></div>
+                        <div class="progress-bar javascript" aria-label="JavaScript vaardigheidsniveau"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <span>PHP</span>
                     <div class="progress">
-                        <div class="progress-bar php"></div>
+                        <div class="progress-bar php" aria-label="PHP vaardigheidsniveau"></div>
                     </div>
                 </div>
             </div>
@@ -67,7 +72,7 @@
         <section id="pagina4">
             <h2>Werkervaring</h2>
             <div class="content">
-                <img src="afbeeldingen/deberen.jpg" alt="Werkervaringfoto" class="werkervaring-foto">
+                <img src="afbeeldingen/deberen.jpg" alt="Afbeelding van werk bij De Beren Alexandrium" class="werkervaring-foto">
                 <p>
                     <span style="font-size: 26px;"><b>De Beren Alexandrium</b></span><br>
                     Kleine Beer 21, 3067 LW Rotterdam<br>
@@ -75,61 +80,78 @@
                 </p>
             </div>
         </section>
+        
         <section id="pagina5">
             <h2>Mijn Projecten</h2>
             <div class="project-container">
                 <!-- Project 1 -->
                 <div class="project">
-                    <img src="afbeeldingen/Project1.png" alt="Project 1" class="project-image">
+                    <img src="afbeeldingen/Project1.png" alt="Screenshot van Project 1" class="project-image">
                     <h3>Project 1</h3>
                     <p>
                         Dit is mijn eerste zelfgemaakte website en ik ben super trots op het resultaat. 
                         Het was een uitdaging, maar ik heb veel geleerd en kijk uit naar wat ik nog meer kan maken!
                     </p>
-                    <a href="Project1/home.html" target="_blank" class="project-link">Bekijk project</a>
+                    <a href="Project1/home.html" target="_blank" class="project-link" aria-label="Bekijk Project 1">Bekijk project</a>
                 </div>
                 <!-- Project 2 -->
                 <div class="project">
-                    <img src="afbeeldingen/Project2.png" alt="Project 2" class="project-image">
+                    <img src="afbeeldingen/Project2.png" alt="Screenshot van Project 2" class="project-image">
                     <h3>Project 2</h3>
                     <p>
                         Mijn tweede project was een groepswerk en hoewel het resultaat prima is, vind ik het zelf wat rommelig. 
                         Ik heb er veel van geleerd voor de volgende keer.
                     </p>
-                    <a href="Project2/Project2Home.html" target="_blank" class="project-link">Bekijk project</a>
+                    <a href="Project2/Project2Home.html" target="_blank" class="project-link" aria-label="Bekijk Project 2">Bekijk project</a>
                 </div>
                 <!-- Project 3 -->
                 <div class="project">
-                    <img src="afbeeldingen/Project3.png" alt="Project 3" class="project-image">
+                    <img src="afbeeldingen/Project3.png" alt="Screenshot van Project 3" class="project-image">
                     <h3>Project 3</h3>
                     <p>
                         Mijn laatste project was een zelfgemaakte Cookie Clicker in JavaScript met OOP. Ik ben echt trots
                          op het resultaat en het was een geweldige ervaring waar ik veel van geleerd heb!
                     </p>
-                    <a href="Project3/index.html" target="_blank" class="project-link">Bekijk project</a>
+                    <a href="Project3/index.html" target="_blank" class="project-link" aria-label="Bekijk Project 3">Bekijk project</a>
                 </div>
             </div>
         </section>
-        
-
     </main>
+
     <footer>
-        <a href="mailto:9022371@student.zadkine.nl" title="Email">
-            <img src="afbeeldingen/email.png" alt="Email" />
+        <a href="mailto:9022371@student.zadkine.nl" title="Stuur een email">
+            <img src="afbeeldingen/email.png" alt="E-mail pictogram">
             <span>9022371@student.zadkine.nl</span>
         </a>
-        <a href="tel:0638429482" title="Telefoon">
-            <img src="afbeeldingen/phone.png" alt="Telefoon" />
+        <a href="tel:0638429482" title="Bel mij">
+            <img src="afbeeldingen/phone.png" alt="Telefoon pictogram">
             <span>06 38429482</span>
         </a>
-        <a href="https://github.com/Thomasdegoeij" target="_blank" title="GitHub">
-            <img src="afbeeldingen/github.png" alt="GitHub" />
+        <a href="https://github.com/Thomasdegoeij" target="_blank" title="Bekijk mijn GitHub">
+            <img src="afbeeldingen/github.png" alt="GitHub pictogram">
             <span>Thomasdegoeij</span>
         </a>
     </footer>
-    
-    
 
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
     
+        function revealOnScroll() {
+            const windowHeight = window.innerHeight;
+            const revealPoint = 150;
+    
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+    
+                if (sectionTop < windowHeight - revealPoint) {
+                    section.classList.add("visible");
+                }
+            });
+        }
+    
+        window.addEventListener("scroll", revealOnScroll);
+        revealOnScroll(); // Initial call for sections already in view
+    });
+    </script>
 </body>
 </html>
